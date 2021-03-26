@@ -40,7 +40,7 @@ const SignIn = () => {
               </div>
 
               <div className="mt-3">
-              <Button block color="red" onClick = {handleSignIn}>
+              <Button block color="green" onClick = {handleSignIn}>
                 <Icon icon="google"/> Continue with Google
               </Button>
               </div>
