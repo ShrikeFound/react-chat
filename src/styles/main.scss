@@ -27,3 +27,11 @@ body,
 .mt-c {
   margin-top: 30vh;
 }
+.avatar-upload label {
+  display: block;
+  cursor: pointer;
+  padding: 0.9rem 1.2rem;
+}
+.avatar-upload input {
+  display: none;
+}
