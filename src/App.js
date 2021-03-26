@@ -3,6 +3,7 @@
 import { Route, Switch } from 'react-router';
 import 'rsuite/dist/styles/rsuite-default.css';
 import PrivateRoute from './components/PrivateRoute';
+import PublicRoute from './components/PublicRoute';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import './styles/main.scss';
@@ -11,9 +12,10 @@ import './styles/main.scss';
 function App() {
   return (
     <Switch>
-      <Route path="/signin">
+      
+      <PublicRoute path="/signin">
         <SignIn/>
-      </Route>
+      </PublicRoute>
       <PrivateRoute path="/">
         <Home/>
       </PrivateRoute>
