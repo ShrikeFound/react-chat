@@ -5,6 +5,7 @@ import { Alert, Button, Modal } from 'rsuite'
 import { useUser } from '../../context/user.context'
 import { useModalState } from '../../misc/custom-hooks'
 import { db, storage } from '../../misc/firebase'
+import UserAvatar from './UserAvatar'
 
 const fileInputTypes = ".jpg,.jpeg,.png"
 const acceptedFileTypes = ['image/png', 'image/jpeg', 'image/pjpeg']
@@ -93,6 +94,13 @@ const AvatarUploadButton = () => {
 
   return (
     <div className="mt-3 center">
+
+      <UserAvatar
+        src={user.avatar}
+        name={user.name}
+        className="avatar-large img-fullsize"
+      />
+
       <div className="avatar-upload">
         
         <label htmlFor="avatar-file" >Select new avatar</label>

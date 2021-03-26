@@ -1,10 +1,11 @@
 import React from 'react'
 import { Avatar } from 'rsuite'
+import { getNameInitials } from '../../misc/helpers'
 
 const UserAvatar = ({ name,...avatarProps }) => {
   return (
-    <Avatar {...avatarProps}>
-      {}
+    <Avatar circle {...avatarProps}>
+      {getNameInitials(name)}
     </Avatar>
   )
 }

@@ -20,13 +20,14 @@ export const UserProvider = ({ children }) => {
         
         userRef = userRef = db.ref(`/users/${authObject.uid}`);
         userRef.on('value', (snapshot) => {
-          const {name,createdAt} = snapshot.val();
+          const {name,createdAt,avatar} = snapshot.val();
           
           const userData = {
             uid: authObject.uid,
             email: authObject.email,
             name,
-            createdAt
+            createdAt,
+            avatar
           }  
 
           setUser(userData);
