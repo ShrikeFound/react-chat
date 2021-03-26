@@ -1,12 +1,13 @@
 import React from 'react'
 import { Redirect, Route } from 'react-router'
+import { useUser } from '../context/user.context'
 
 const PublicRoute = ({ children, ...routeProps }) => {
   
-  const profile = false
+  const user = useUser();
 
-  if (profile) {
-    return <Redirect to="/"/>
+  if (user) {
+    return <Redirect to="/" />
   }
 
 
