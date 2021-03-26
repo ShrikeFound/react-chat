@@ -1,6 +1,6 @@
 
 //React Suite
-import { Route, Switch } from 'react-router';
+import { Switch } from 'react-router';
 import 'rsuite/dist/styles/rsuite-default.css';
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
