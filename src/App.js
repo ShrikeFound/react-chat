@@ -13,16 +13,20 @@ import './styles/main.scss';
 function App() {
   return (
     <UserProvider>
-    <Switch>
+      <Switch>
+        
       
-      <PublicRoute path="/signin">
-        <SignIn/>
-      </PublicRoute>
-      <PrivateRoute path="/">
-        <Home/>
-      </PrivateRoute>
+        <PublicRoute path="/signin">
+          <SignIn/>
+        </PublicRoute>
+        
+        <PrivateRoute path="/">
+          <Home />
+        </PrivateRoute>
+        
       </Switch>
-      </UserProvider>
+    </UserProvider>
+    
   );
 }
 

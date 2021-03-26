@@ -21,7 +21,7 @@ export const useModalState = (defaultValue = false) => {
 }
 
 
-
+//adds query listener -- used in sidebar
 export const useMediaQuery = (query) => {
   
   const [matches, setMatches] = useState(() => {

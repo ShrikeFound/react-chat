@@ -1,3 +1,6 @@
+
+
+//splits name into array to get first letters of each word, for use with avatar
 export const getNameInitials = (name) => {
   const splitName = name.toUpperCase().split(" ");
   if (splitName.length > 1) {

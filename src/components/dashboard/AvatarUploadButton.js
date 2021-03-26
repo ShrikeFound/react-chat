@@ -1,4 +1,3 @@
-import { queryAllByAttribute } from '@testing-library/dom'
 import React, { useState,useRef } from 'react'
 import AvatarEditor from 'react-avatar-editor'
 import { Alert, Button, Modal } from 'rsuite'
@@ -7,7 +6,12 @@ import { useModalState } from '../../misc/custom-hooks'
 import { db, storage } from '../../misc/firebase'
 import UserAvatar from './UserAvatar'
 
+//list of inputs I want to use, as default for upload window
 const fileInputTypes = ".jpg,.jpeg,.png"
+
+//list of input types to check against file type when saving image 
+//since you can get around the default file types.
+//Don't want no funny business.
 const acceptedFileTypes = ['image/png', 'image/jpeg', 'image/pjpeg']
 const isValid = (file) => {
   return acceptedFileTypes.includes(file.type)
@@ -16,8 +20,12 @@ const isValid = (file) => {
 
 const AvatarUploadButton = () => {
 
+  //from custom hooks
   const { open, close, isOpen } = useModalState();
+
   const [image, setImage] = useState(null)
+  
+  //from userContext
   const { user } = useUser();
   const [loading, setLoading] = useState(false)
   const avatarRef = useRef();
@@ -50,7 +58,7 @@ const AvatarUploadButton = () => {
     setLoading(true)
     try {
       
-      const blob = await getBlog(canvas);
+      const blob = await getBlob(canvas);
 
       const avatarFileRef = storage.ref(`/user/${user.uid}`).child('avatar')
 
@@ -79,7 +87,8 @@ const AvatarUploadButton = () => {
 
   }
 
-  const getBlog = (canvas) => {
+  //converts canvas object to blob for saving in firebase storage
+  const getBlob = (canvas) => {
     return new Promise((resolve,reject) => {
       canvas.toBlob((blob) => {
         if (blob) {
