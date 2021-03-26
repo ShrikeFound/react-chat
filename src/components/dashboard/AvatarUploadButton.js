@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import AvatarEditor from 'react-avatar-editor'
 import { Alert, Button, Modal } from 'rsuite'
 import { useModalState } from '../../misc/custom-hooks'
 
@@ -47,7 +48,20 @@ const AvatarUploadButton = () => {
             <Modal.Title>Upload new Avatar</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            stuff
+            {image &&
+              <div className="flex-center">
+                <AvatarEditor
+                  image={image}
+                  width={200}
+                  height={200}
+                  border={10}
+                  color={[0, 0, 0, 0.7]} // RGBA
+                  scale={1.2}
+                  borderRadius={100}
+                  rotate={0}
+                />
+              </div>
+            }
           </Modal.Body>
           <Modal.Footer>
             <Button block appearance="ghost">
