@@ -35,7 +35,7 @@ const SignIn = () => {
           <Col className="center" mdOffset={6} xs={24} md={12}>
             <Panel >
               <div>
-                <h2>React Chat</h2>
+                <h2>Fireside Chat</h2>
                 <p>Welcome! Sit by the fire and stay a while.</p>
               </div>
 
