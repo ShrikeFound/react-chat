@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -66,4 +70,39 @@ body,
 .grid-center {
   display: grid;
   justify-items: center;
+}
+
+.fireside-nav {
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: darken(#ddd, 20%);
+  }
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.marker {
+  border: 2px solid yellow;
+}
+
+.marker-red {
+  border: 2px solid red;
+}
+.marker-blue {
+  border: 2px solid blue;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }

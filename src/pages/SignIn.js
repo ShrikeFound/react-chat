@@ -37,11 +37,11 @@ const SignIn = () => {
               <div className="grid-center">
                 <h2>Fireside Chat</h2>
                 <p>Welcome! Sit by the fire and stay a while.</p>
-                <img className="small-image" src={fireside_icon}/>
+                <img alt="fireside logo, a campfire" className="small-image" src={fireside_icon}/>
               </div>
 
               <div className="mt-3">
-              <Button block color="green" onClick = {handleSignIn}>
+                <Button block style={{backgroundColor: "#F15A24", color:"white"}} onClick = {handleSignIn}>
                 <Icon icon="google"/> Continue with Google
               </Button>
               </div>
