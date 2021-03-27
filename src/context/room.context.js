@@ -1,11 +1,11 @@
-import { createContext, useEffect, useState } from "react";
+import React,{ createContext, useEffect, useState } from "react";
 import { db } from "../misc/firebase";
 
 
 
 const RoomContext = createContext();
 
-export const RoomProvider = (children) => {
+export const RoomProvider = ({ children }) => {
   const [rooms, setRooms] = useState(null);
 
 
