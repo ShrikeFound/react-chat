@@ -13,7 +13,7 @@ const Sidebar = () => {
     if (topSectionRef.current) {
       setHeight(topSectionRef.current.scrollHeight)
     }
-  })
+  },[])
 
   return (
     <div className=" overflow-y-hidden h-100 pt-2">
