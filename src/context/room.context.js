@@ -13,7 +13,9 @@ export const RoomProvider = ({ children }) => {
     const roomListRef = db.ref('rooms');
 
     roomListRef.on('value', (snapshot) => {
-      console.log(snapshot.val())
+      const roomArray = convertToArray(snapshot.val());
+      console.log(roomArray)
+      setRooms(roomArray)
     })
 
 
@@ -25,5 +27,15 @@ export const RoomProvider = ({ children }) => {
 
 
 
-  return <RoomContext.Provider value="hello">{children}</RoomContext.Provider>
+  return <RoomContext.Provider value={rooms}>{children}</RoomContext.Provider>
 }
+
+const convertToArray = (val => {
+  if (val) {
+    return Object.keys(val).map(roomId => {
+      return { ...val[roomId], id: roomId }
+    });
+  } else {
+    return []
+  }
+})
