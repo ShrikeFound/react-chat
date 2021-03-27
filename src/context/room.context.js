@@ -1,4 +1,4 @@
-import React,{ createContext, useEffect, useState } from "react";
+import React,{ createContext, useContext, useEffect, useState } from "react";
 import { db } from "../misc/firebase";
 
 
@@ -7,14 +7,14 @@ const RoomContext = createContext();
 
 export const RoomProvider = ({ children }) => {
   const [rooms, setRooms] = useState(null);
-
+  console.log(rooms)
 
   useEffect(() => {
     const roomListRef = db.ref('rooms');
 
     roomListRef.on('value', (snapshot) => {
       const roomArray = convertToArray(snapshot.val());
-      console.log(roomArray)
+      // console.log(roomArray)
       setRooms(roomArray)
     })
 
@@ -39,3 +39,8 @@ const convertToArray = (val => {
     return []
   }
 })
+
+
+export const useRoom = () => {
+  return useContext(RoomContext)
+}
