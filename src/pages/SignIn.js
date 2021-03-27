@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Grid, Panel,Row,Col, Button ,Icon, Alert} from 'rsuite'
 import { auth, db } from '../misc/firebase'
 import firebase from 'firebase/app';
-
+import fireside_icon from '../images/fireside_icon.svg'
 
 const SignIn = () => {
 
@@ -34,9 +34,10 @@ const SignIn = () => {
         <Row>
           <Col className="center" mdOffset={6} xs={24} md={12}>
             <Panel >
-              <div>
+              <div className="grid-center">
                 <h2>Fireside Chat</h2>
                 <p>Welcome! Sit by the fire and stay a while.</p>
+                <img className="small-image" src={fireside_icon}/>
               </div>
 
               <div className="mt-3">

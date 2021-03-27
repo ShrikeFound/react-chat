@@ -1,0 +1,25 @@
+<svg id="trace" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387.49 349.23">
+<title>fireside_icon</title>
+<path d="M502,1603.08c24-65.08-41-86.45-41-86.45,21,28.17,4,56.34,4,56.34-93.71,80.46-36.91,114.68-15.86,123.71L639.26,1698C681.67,1593.81,612,1536.06,612,1536.06s20,38.85-38,62.17l11-3.31c34.22-113.84-71-129.78-71-129.78,38,10.69,21,51.49,21,51.49-16.56,12.51-25.94,24.1-31.19,33.76" transform="translate(-334.26 -1450.06)" style="fill:#f15a24;stroke:#f15a24;stroke-miterlimit:10;stroke-width:0.75px"/>
+<path d="M466.93,1695c-1.55-16-.7-53.44,39.07-64.5,0,0-22,38.12,0,53.19,0,0,58-41.66,30-80.67a84.34,84.34,0,0,1,35,38.35l6.55,35.33a101.31,101.31,0,0,1-2.9,20.32Z" transform="translate(-334.26 -1450.06)" style="fill:#fbb03b"/>
+<path d="M683.29,1799.29l-293-3.7c-10.71-.13-19.18-20.3-19.23-45.39v-.12c0-.52,0-1,0-1.54.32-25.84,9.46-46.68,20.41-46.54l295,3.72v.31a10.53,10.53,0,0,0-1.6.57l1.6-.57a8.38,8.38,0,0,1,2.28-.28c10.94.13,19.54,21.2,19.22,47-.3,23.84-8.1,43.43-17.9,46.21Z" transform="translate(-334.26 -1450.06)" style="fill:#a67c52"/>
+<path d="M676.85,1790.67a8.49,8.49,0,0,0,2.24.33c10.82.14,19.86-20.48,20.18-46s-8.19-46.41-19-46.54a8.17,8.17,0,0,0-2.25.28" transform="translate(-334.26 -1450.06)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/>
+<path d="M660.07,1744.46c-.3,23.77,7,43.47,16.78,46.21v.3l-291.75-3.68c-10.82-.13-19.34-21-19-46.54s9.36-46.18,20.18-46L678,1698.39v.31C668.21,1701.19,660.37,1720.69,660.07,1744.46Z" transform="translate(-334.26 -1450.06)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/>
+<line x1="38.66" y1="294.33" x2="77.72" y2="294.65" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:10px"/>
+<line x1="51.79" y1="277.86" x2="129.28" y2="277.86" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:10px"/>
+<line x1="139.29" y1="311.67" x2="212.9" y2="311.04" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:10px"/>
+<line x1="198.43" y1="278.18" x2="261.98" y2="277.55" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:10px"/>
+<line x1="252.74" y1="311.69" x2="302.24" y2="311.01" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:10px"/>
+<line x1="60.71" y1="311.51" x2="103.55" y2="311.19" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:10px"/>
+<path d="M1105,1798" transform="translate(-334.26 -1450.06)" style="fill:none;stroke:#c1272d;stroke-miterlimit:10;stroke-width:10px"/>
+<path d="M441.14,1693.36c-21.05-9.3-77.85-44.53,15.86-127.36,0,0,17-29-4-58,0,0,65,22,41,89" transform="translate(-334.26 -1450.06)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/>
+<path d="M495.81,1542.75c5.25-9.94,14.63-21.87,31.19-34.75,0,0,17-42-21-53,0,0,105.2,16.41,71,133.6" transform="translate(-334.26 -1450.06)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/>
+<path d="M566,1592c58-24,38-64,38-64s69.67,59.45,27.26,166.71" transform="translate(-334.26 -1450.06)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/>
+<path d="M573.57,1674.12a128.07,128.07,0,0,1-2.9,22.92" transform="translate(-334.26 -1450.06)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/>
+<path d="M462.93,1694.76c-1.55-18-.7-60.28,39.07-72.76,0,0-22,43,0,60,0,0,58-47,30-91,0,0,23.27,13.3,35,43.26" transform="translate(-334.26 -1450.06)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/>
+<line x1="310.24" y1="85.44" x2="354.24" y2="58.44" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/>
+<line x1="328.62" y1="144.05" x2="379.87" y2="137.83" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/>
+<line x1="336.24" y1="193.53" x2="386.24" y2="206.35" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/>
+<line x1="77.24" y1="81.44" x2="33.24" y2="54.44" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/>
+<line x1="58.87" y1="140.05" x2="7.62" y2="133.83" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/>
+<line x1="51.25" y1="189.53" x2="1.24" y2="202.35" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px"/></svg>

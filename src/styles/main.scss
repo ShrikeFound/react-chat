@@ -56,3 +56,14 @@ body,
   height: 100%;
   width: 100%;
 }
+
+.small-image {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.grid-center {
+  display: grid;
+  justify-items: center;
+}
