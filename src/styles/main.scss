@@ -26,8 +26,16 @@ body,
   margin-top: 1rem;
 }
 
+.mt-2 {
+  margin-top: 2rem;
+}
+
 .mt-3 {
   margin-top: 3rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
 }
 
 .mb-3 {
@@ -79,7 +87,8 @@ body,
   justify-items: center;
 }
 
-.fireside-nav {
+.fireside-nav,
+.chat-middle {
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
@@ -145,4 +154,13 @@ $chat-b: 65px;
 
 .rs-nav-subtle.rs-nav-vertical .rs-nav-item > .rs-nav-item-content::before {
   background-color: #fbb03b;
+}
+
+.rs-input-group:not(.rs-input-group-inside):not(.rs-input-group-disabled):hover,
+.rs-input-group:not(.rs-input-group-inside):not(.rs-input-group-disabled).rs-input-group-focus {
+  border-color: #fbb03b;
+}
+
+a {
+  color: #fbb03b;
 }
