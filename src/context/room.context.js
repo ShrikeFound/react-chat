@@ -12,7 +12,6 @@ export const RoomProvider = ({ children }) => {
 
   useEffect(() => {
     const roomListRef = db.ref('rooms');
-
     roomListRef.on('value', (snapshot) => {
       const roomArray = convertToArray(snapshot.val());
       // console.log(roomArray)

@@ -22,3 +22,21 @@ export const convertToArray = (val => {
     return []
   }
 })
+
+
+export const groupBy = (array, groupingKeyFunction) => {
+  return array.reduce((result, item) => {
+    const groupingKey = groupingKeyFunction(item);
+
+    //if array for group doesn't exist yet create array
+    if (!result[groupingKey]) {
+      result[groupingKey] = [];
+    }
+
+    //push item into array with key
+    result[groupingKey].push(item);
+    console.log("result: ",result)
+    return result
+
+  }, {})
+}

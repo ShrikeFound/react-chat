@@ -76,7 +76,7 @@ const NewRoomModal = () => {
   
   return (
     <div className="mt-1">
-      <Button block onClick={open}>
+      <Button block color="grey" onClick={open}>
         <Icon icon="fire" /> New Fireside
       </Button>
 

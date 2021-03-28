@@ -1,7 +1,5 @@
 @import "~rsuite/dist/styles/rsuite-dark.css";
 
-@base-color: red;
-
 * {
   box-sizing: border-box;
 }
@@ -39,6 +37,11 @@ body,
 .mt-c {
   margin-top: 30vh;
 }
+
+.pt-2 {
+  padding-top: 2rem;
+}
+
 .avatar-upload label {
   display: block;
   cursor: pointer;
@@ -127,4 +130,19 @@ $chat-b: 65px;
 
 .chat-middle {
   height: calc(97vh - #{$chat-t} - #{$chat-b});
+}
+
+.rs-nav .rs-dropdown .rs-dropdown-menu-active ~ .rs-dropdown-toggle,
+.rs-nav .rs-nav-item-active > .rs-nav-item-content,
+.rs-nav .rs-dropdown .rs-dropdown-menu-active ~ .rs-dropdown-toggle:hover,
+.rs-nav .rs-nav-item-active > .rs-nav-item-content:hover,
+.rs-nav .rs-dropdown .rs-dropdown-menu-active ~ .rs-dropdown-toggle:focus,
+.rs-nav .rs-nav-item-active > .rs-nav-item-content:focus,
+.rs-nav .rs-dropdown .rs-dropdown-menu-active ~ .rs-dropdown-toggle:active,
+.rs-nav .rs-nav-item-active > .rs-nav-item-content:active {
+  color: #fbb03b;
+}
+
+.rs-nav-subtle.rs-nav-vertical .rs-nav-item > .rs-nav-item-content::before {
+  background-color: #fbb03b;
 }
