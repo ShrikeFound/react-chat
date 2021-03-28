@@ -8,6 +8,15 @@ import MessageItem from './MessageItem';
 const MessageCount = 15;
 const messagesRef = db.ref('/messages');
 
+const shouldScrollToBottom = (node,threshold = 35) => {
+  const percentage = (100 * node.scrollTop) / (node.scrollHeight - node.clientHeight) || 0
+  
+  return percentage > threshold
+
+
+}
+
+
 const Messages = () => {
   const [messages, setMessages] = useState(null);
   const { firesideId } = useParams();
@@ -20,12 +29,19 @@ const Messages = () => {
   const loadMessages = useCallback((limitToLast) => {
     
     messagesRef.off();
+    const node = selfRef.current
 
 
     messagesRef.orderByChild('firesideId').equalTo(firesideId).limitToLast(limitToLast || MessageCount).on('value', (snapshot) => {
       const data = convertToArray(snapshot.val());
 
+
       setMessages(data);
+      console.log("SHOULD I SCROLL? ",shouldScrollToBottom(node));
+      if (shouldScrollToBottom(node)) {
+        node.scrollTop = node.scrollHeight;
+      }
+
     })
 
     setLimit(previous => previous+MessageCount)

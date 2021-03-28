@@ -19,7 +19,7 @@ const EditableInput = ({initValue,onSave,label = null,name, placeholder = "Write
   const handleSaveButtonClick = async () => {
     const trimmed = input.trim();
     if (trimmed === '') {
-      Alert.info(emptyMessage, 4000);
+      Alert.info(emptyMessage, 2500);
       return
     }
 

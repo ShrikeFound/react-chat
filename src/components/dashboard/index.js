@@ -42,9 +42,9 @@ const Dashboard = ({onSignOut}) => {
 
       await db.ref().update(updates);
 
-      Alert.success('Nickname saved!',4000);
+      Alert.success('Nickname saved!',2500);
     } catch (error) {
-      Alert.error(error,4000)
+      Alert.error(error,2500)
     }
 
   

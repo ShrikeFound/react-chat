@@ -107,13 +107,13 @@ const AvatarUploadButton = () => {
       // userAvatarRef.set(downloadURL);
 
       setLoading(false)
-      Alert.success("avatar updloaded!",4000);
+      Alert.success("avatar updloaded!",2500);
 
 
     } catch (err) {
 
       setLoading(false)
-      Alert.error(err.message,4000)
+      Alert.error(err.message,2500)
 
     }
 

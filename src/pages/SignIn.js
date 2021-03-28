@@ -20,9 +20,9 @@ const SignIn = () => {
       }
 
 
-      Alert.success("Signed in",4000)
+      Alert.success("Signed in",2500)
     } catch(err) {
-      Alert.error(err.message,4000)
+      Alert.error(err.message,2500)
     }
 
   }

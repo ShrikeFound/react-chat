@@ -12,7 +12,7 @@ const DashboardToggle = () => {
   const onSignOut = useCallback(() => {
     
     auth.signOut();
-    Alert.info("Signed out", 4000);
+    Alert.info("Signed out", 2500);
 
     close();
 

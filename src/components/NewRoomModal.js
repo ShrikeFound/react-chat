@@ -54,7 +54,7 @@ const NewRoomModal = () => {
 
 
       setLoading(false);
-      Alert.info(`${formValue.name}`,4000)
+      Alert.info(`${formValue.name}`,2500)
       setFormValue(initialFormValues);
       close();
       
@@ -63,7 +63,7 @@ const NewRoomModal = () => {
 
     } catch(error) {
       setLoading(false);
-      Alert.error(error.message,4000)
+      Alert.error(error.message,2500)
     }
 
 
