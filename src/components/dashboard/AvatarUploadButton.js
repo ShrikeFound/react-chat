@@ -17,6 +17,31 @@ const isValid = (file) => {
   return acceptedFileTypes.includes(file.type)
 }
 
+const getUserUpdates = async (userId,keytoUpdate,value,db) => {
+  const updates = {};
+
+  updates[`/users/${userId}/${keytoUpdate}`] = value
+
+  const getMessages = db.ref('/messages').orderByChild('author/uid').equalTo(userId).once("value");
+  const getRooms = db.ref('/rooms').orderByChild('lastMessage/author/uid').equalTo(userId).once('value');
+
+  const [messagesSnapshot,roomsSnapshot] = await Promise.all([getMessages, getRooms]);
+
+  messagesSnapshot.forEach(m => {
+    updates[`messages/${m.key}/author/${keytoUpdate}`] = value
+  })
+
+
+  roomsSnapshot.forEach(r => {
+    updates[`rooms/${r.key}/lastMessage/author/${keytoUpdate}`] = value
+  })
+
+  return updates
+}
+
+
+
+
 
 const AvatarUploadButton = () => {
 
@@ -52,6 +77,11 @@ const AvatarUploadButton = () => {
 
   }
 
+
+
+
+
+
   const handleUploadClick = async () => {
     const canvas = avatarRef.current.getImageScaledToCanvas();
 
@@ -59,6 +89,9 @@ const AvatarUploadButton = () => {
     try {
       
       const blob = await getBlob(canvas);
+
+
+
 
       const avatarFileRef = storage.ref(`/user/${user.uid}`).child('avatar')
 
@@ -68,10 +101,10 @@ const AvatarUploadButton = () => {
       });
 
       const downloadURL = await uploadAvatarResult.ref.getDownloadURL()
-
-
-      const userAvatarRef = db.ref(`/users/${user.uid}`).child('avatar');
-      userAvatarRef.set(downloadURL);
+      const updates = await getUserUpdates(user.uid,'avatar',downloadURL,db)
+      await db.ref().update(updates);
+      // const userAvatarRef = db.ref(`/users/${user.uid}`).child('avatar');
+      // userAvatarRef.set(downloadURL);
 
       setLoading(false)
       Alert.success("avatar updloaded!",4000);
