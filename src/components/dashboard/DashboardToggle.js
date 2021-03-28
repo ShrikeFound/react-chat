@@ -7,7 +7,7 @@ import { auth } from '../../misc/firebase';
 const DashboardToggle = () => {
   
   const { isOpen, close, open } = useModalState();
-  const isMobile = useMediaQuery('(max-width: 1000px)');
+  const isDesktop = useMediaQuery('(min-width: 1000px)');
 
   const onSignOut = useCallback(() => {
     
@@ -24,7 +24,7 @@ const DashboardToggle = () => {
         <Icon icon="dashboard"/> Dashboard
       </Button>
 
-      <Drawer full={isMobile} show={isOpen} onHide={close} placement="left">
+      <Drawer full={!isDesktop} show={isOpen} onHide={close} placement="left">
         <Dashboard onSignOut={ onSignOut }/>
       </Drawer>
 
