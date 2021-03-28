@@ -9,7 +9,7 @@ const FiresideList = ({ sectionHeight }) => {
   const rooms = useRoom();
   const location = useLocation();
 
-  console.log(rooms)
+  // console.log(rooms)
   return (
     <Nav
       vertical

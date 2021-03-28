@@ -11,3 +11,14 @@ export const getNameInitials = (name) => {
 
 
 }
+
+
+export const convertToArray = (val => {
+  if (val) {
+    return Object.keys(val).map(roomId => {
+      return { ...val[roomId], id: roomId }
+    });
+  } else {
+    return []
+  }
+})

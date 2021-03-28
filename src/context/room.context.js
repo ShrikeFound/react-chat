@@ -1,5 +1,6 @@
 import React,{ createContext, useContext, useEffect, useState } from "react";
 import { db } from "../misc/firebase";
+import { convertToArray } from "../misc/helpers";
 
 
 
@@ -30,15 +31,15 @@ export const RoomProvider = ({ children }) => {
   return <RoomContext.Provider value={rooms}>{children}</RoomContext.Provider>
 }
 
-const convertToArray = (val => {
-  if (val) {
-    return Object.keys(val).map(roomId => {
-      return { ...val[roomId], id: roomId }
-    });
-  } else {
-    return []
-  }
-})
+// const convertToArray = (val => {
+//   if (val) {
+//     return Object.keys(val).map(roomId => {
+//       return { ...val[roomId], id: roomId }
+//     });
+//   } else {
+//     return []
+//   }
+// })
 
 
 export const useRoom = () => {
