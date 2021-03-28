@@ -29,7 +29,7 @@ const Messages = () => {
   },[firesideId])
   console.log(messages)
   return (
-    <ul style={{listStyle:"none"}}>
+    <ul className="chat-middle" style={{listStyle:"none"}}>
       {ChatEmpty && <li>No Messages yet</li>}
       {canShowMessages && messages.map(m => {
         return <MessageItem key={m.id} message={m}/>

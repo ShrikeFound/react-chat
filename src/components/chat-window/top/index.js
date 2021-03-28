@@ -9,9 +9,9 @@ const Top = () => {
   const name = useCurrentRoom(v => v.name);
   const isDesktop = useMediaQuery('(min-width: 1000px)');
   return (
-    <div style={{display:"flex",alignItems:"center"}}>
+    <div className="chat-top" style={{display:"flex",alignItems:"center",marginLeft:"2rem"}}>
       <Icon componentClass={Link} to="/" icon="arrow-circle-left" size="2x" style={isDesktop ? { display: "none" } : { marginRight: "1rem" }}/>
-      <h4>{name}</h4>
+      <h2>{name}</h2>
     </div>
   )
 }

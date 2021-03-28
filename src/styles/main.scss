@@ -113,3 +113,18 @@ body,
 .flex {
   display: flex;
 }
+
+$chat-t: 75px;
+$chat-b: 65px;
+
+.chat-top {
+  height: $chat-t;
+}
+
+.chat-bottom {
+  height: $chat-b;
+}
+
+.chat-middle {
+  height: calc(97vh - #{$chat-t} - #{$chat-b});
+}

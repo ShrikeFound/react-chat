@@ -75,7 +75,7 @@ const Bottom = () => {
 
 
   return (
-    <div>
+    <div className="chat-bottom">
       <InputGroup>
         <Input placeholder="write new message here..." value={input} onChange={handleInputChage} onKeyDown={handleKeyDownSend}/>
         <InputGroup.Button disabled={loading} color="green" onClick={handleClickSend}>
