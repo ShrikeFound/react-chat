@@ -1,10 +1,22 @@
 import React from 'react'
+import TimeAgo from 'timeago-react';
+import UserAvatar from '../../dashboard/UserAvatar';
 
-const MessageItem = () => {
+const MessageItem = ({message}) => {
+  const { author, createdAt, text } = message;
   return (
-    <div>
-      hello
-    </div>
+    <li>
+      <div>
+        <UserAvatar src={author.avatar} name={author.name} size="xs" />
+        <span>{author.name}</span>
+        <TimeAgo datetime={createdAt}/>
+      </div>
+
+      <div>
+        <span>{text}</span>
+      </div>
+
+    </li>
   )
 }
 
