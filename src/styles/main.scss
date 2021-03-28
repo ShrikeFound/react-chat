@@ -1,3 +1,4 @@
+@import "~rsuite/dist/styles/rsuite-dark.css";
 * {
   box-sizing: border-box;
 }
@@ -93,16 +94,19 @@ body,
 }
 
 .marker {
-  border: 2px solid yellow;
+  // border: 2px solid yellow;
 }
 
 .marker-red {
-  border: 2px solid red;
+  // border: 2px solid red;
 }
 .marker-blue {
-  border: 2px solid blue;
+  // border: 2px solid blue;
 }
 
 .overflow-y-hidden {
   overflow-y: hidden;
+}
+.flex {
+  display: flex;
 }

@@ -15,15 +15,16 @@ const FiresideList = ({ sectionHeight }) => {
       vertical
       className="fireside-nav marker-blue"
       appearance="subtle"
+      reversed
       activeKey={location.pathname}
       style={{height: `calc(100% - ${sectionHeight}px)`}}
       
     >
-      {!rooms && <Loader center vertical content="Loading" speed="low" size="md" />}
+      {!rooms && <Loader center vertical content="Loading" speed="slow" size="md" />}
       
       {
         rooms && rooms.length > 0 && rooms.map(r => (
-          <Nav.Item componentClass={Link} to={`/firesides/${r.id}`} key={r.id} eventKey={`/firesides/${r.id}`}>
+      <Nav.Item componentClass={Link} to={`/fireside/${r.id}`} key={r.id} eventKey={`/fireside/${r.id}`}>
             <FiresideItem room={r}/>
       </Nav.Item>
         ))
